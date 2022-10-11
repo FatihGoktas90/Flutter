@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import '../models/transaction.dart';
+
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
@@ -12,8 +12,12 @@ class TransactionList extends StatelessWidget {
     // ignore: sized_box_for_whitespace
     return Container(
       height: 300,
-      child: ListView.builder(
+      child: transactions.isEmpty ? Column(children: <Widget> [
+        Text('No Transaction added yet !!' , style: Theme.of(context).textTheme.headline6,),
+        Image.asset('/assets/image/waiting.png'),
+      ],) : ListView.builder(
         itemBuilder: (ctx, index) {
+          
           return Card(
             child: Row(
               children: <Widget>[
