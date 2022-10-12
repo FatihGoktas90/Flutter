@@ -1,46 +1,58 @@
 import 'package:flutter/material.dart';
 
 class TextLearnView extends StatelessWidget {
-  const TextLearnView({super.key, this.userName});
+  const TextLearnView({super.key, this.userName, this.keys});
   final String name = 'Fatih';
   final String? userName;
+  final ProjectKeys? keys;
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Welcome $name ${name.length}',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
-            textScaleFactor: 1,
-            style: ProjectStyle.welcomeStyle,
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'Merhaba',
+          style: TextStyle(
+            color: Colors.cyan,
           ),
-          Text(
-            'Welcome $name ${name.length}',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
-            textScaleFactor: 1,
-            style: ProjectStyle.welcomeStyle,
-          ),
-          Text(
-            'Welcome $name ${name.length}',
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.center,
-            textScaleFactor: 1,
-            style: Theme.of(context)
-                .textTheme
-                .headline5
-                ?.copyWith(color: ProjectColors.welcomeColor),
-          ),
-          Text(userName ?? ''),
-          const Text('Merhaba'),
-        ],
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Welcome $name ${name.length}',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              textScaleFactor: 1,
+              style: ProjectStyle.welcomeStyle,
+            ),
+            Text(
+              'Welcome $name ${name.length}',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              textScaleFactor: 1,
+              style: ProjectStyle.welcomeStyle,
+            ),
+            Text(
+              'Welcome $name ${name.length}',
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              textScaleFactor: 1,
+              style: Theme.of(context)
+                  .textTheme
+                  .headline5
+                  ?.copyWith(color: ProjectColors.welcomeColor),
+            ),
+            Text(userName ?? ''),
+            // Text(keys!.welcome),
+          ],
+        ),
       ),
     );
   }
