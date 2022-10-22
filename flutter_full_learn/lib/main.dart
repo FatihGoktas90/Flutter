@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '101/color_learn.dart';
-import '101/image_learn.dart';
+
+import 'demos/stack_demo_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+        progressIndicatorTheme:
+            const ProgressIndicatorThemeData(color: Colors.white),
+        listTileTheme: const ListTileThemeData(contentPadding: EdgeInsets.zero),
         cardTheme: CardTheme(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20))),
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
         // )
         errorColor: ColorsItems.porchase,
       ),
-      home: const ImageLearn(),
+      home: const StackDemoView(),
     );
   }
 }

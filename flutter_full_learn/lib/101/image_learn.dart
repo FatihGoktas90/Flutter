@@ -37,7 +37,7 @@ class ImageLearn extends StatelessWidget {
 
 class ImageItems {
   final String cartoon = 'assets/cartoon.png';
-  final String demo = 'assets/demo.png';
+  final String demo = 'assets/png/demo.png';
   final String withoutPath = 'cartoon';
 }
 
