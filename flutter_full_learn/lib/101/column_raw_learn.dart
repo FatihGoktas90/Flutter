@@ -34,7 +34,7 @@ class ColumnRawLearn extends StatelessWidget {
               ],
             )),
         const Expanded(flex: 2, child: FlutterLogo()),
-        Container(
+        SizedBox(
           height: ProjectContainerSizes.cardHeight,
           child: Column(
             children: const [

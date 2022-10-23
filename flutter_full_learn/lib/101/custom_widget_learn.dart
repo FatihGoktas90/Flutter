@@ -57,7 +57,9 @@ class CustomFootButton extends StatelessWidget
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          primary: redColor, shape: const StadiumBorder()),
+          // ignore: deprecated_member_use
+          primary: redColor,
+          shape: const StadiumBorder()),
       onPressed: onPressed,
       child: Padding(
         padding: normal2xPadding,
